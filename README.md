@@ -1,5 +1,4 @@
-![hurbOS Logo]
-(https://ibb.co/4Kh44cS)
+![hurbOS](https://ibb.co/4Kh44cS)
 ---
 ## About Us:
 Just a couple of guys that want to write a \*nix like OS from scratch
