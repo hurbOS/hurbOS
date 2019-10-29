@@ -3,6 +3,9 @@
 ## About Us:
 Just a couple of guys that want to write a \*nix like OS from scratch. 
 
+## Ultimate Goal:
+A secure, stable OS that that can actually be used as a computer
+
 ## Roadmap
 - [x] Get a bootable helloworld OS (On its own branch)
 - [ ] Get some standard headers
@@ -14,6 +17,5 @@ Just a couple of guys that want to write a \*nix like OS from scratch.
 ## Contributers
 * Thou - Ideas and Logo Design
 * Captainjamason - Programming
-
 ---
 Come say Hi! https://discord.gg/pTBhqGM 
