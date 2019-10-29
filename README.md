@@ -3,11 +3,13 @@
 ## About Us:
 Just a couple of guys that want to write a \*nix like OS from scratch. 
 
-## Goals
+## Roadmap
 - [x] Get a bootable helloworld OS (On its own branch)
 - [ ] Get some standard headers
 - [ ] ~~Bash?~~ zsh!
 - [ ] ZFS
+- [ ] Installer
+- [ ] Package Manager
 
 ## Contributers
 * Thou - Ideas and Logo Design
