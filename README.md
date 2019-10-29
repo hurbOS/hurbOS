@@ -8,3 +8,10 @@ Just a couple of guys that want to write a \*nix like OS from scratch.
 - [ ] Get some standard headers
 - [ ] ~~Bash?~~ zsh!
 - [ ] ZFS
+
+## Contributers
+* Thou - Ideas and Logo Design
+* Captainjamason - Programming
+
+---
+Come say Hi! https://discord.gg/pTBhqGM 
