@@ -1,5 +1,6 @@
 build/*
 out/*
+out/hurbOS.iso
 !out/grub.cfg
 !out/geniso.sh
 note
