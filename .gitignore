@@ -1,3 +1,5 @@
-build
-out
+build/*
+out/*
+!out/grub.cfg
+!out/geniso.sh
 note
