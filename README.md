@@ -4,7 +4,7 @@
 Just a couple of guys that want to write a \*nix like OS from scratch. 
 
 ## Ultimate Goal:
-A secure, stable OS that that can actually be used as a computer
+A Unix like OS with security and stability in mind.
 
 ## Roadmap
 - [x] Get a bootable helloworld OS (On its own branch)
