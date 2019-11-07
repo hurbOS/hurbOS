@@ -52,7 +52,7 @@ $(ARCHDIR)/crtn.o \
  
 all: hurbos.kernel
  
-myos.kernel: $(OBJS) $(ARCHDIR)/linker.ld
+hurbos.kernel: $(OBJS) $(ARCHDIR)/linker.ld
 	$(CC) -T $(ARCHDIR)/linker.ld -o $@ $(CFLAGS) $(LINK_LIST)
 	grub-file --is-x86-multiboot hurbos.kernel
  
@@ -78,6 +78,6 @@ install-headers:
  
 install-kernel: hurbos.kernel
 	mkdir -p $(DESTDIR)$(BOOTDIR)
-	cp myos.kernel $(DESTDIR)$(BOOTDIR)
+	cp hurbos.kernel $(DESTDIR)$(BOOTDIR)
  
 -include $(OBJS:.o=.d)
