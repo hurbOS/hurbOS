@@ -19,3 +19,4 @@ A Unix like OS with security and stability in mind.
 * Captainjamason - Programming
 ---
 Come say Hi! https://discord.gg/pTBhqGM 
+IRC @ #hurbOS on freenode
