@@ -22,6 +22,11 @@ enum vga_color {
 	VGA_COLOR_WHITE = 15,
 };
 
+struct Cursor {
+	uint8_t x;
+	uint8_t y;
+}__attribute__((packed));
+
 static inline uint8_t vga_entry_color(enum vga_color fg, enum vga_color bg) {
 	return fg | bg << 4;
 }
