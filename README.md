@@ -18,6 +18,3 @@ A Unix like OS with security and stability in mind.
 * Thou - Ideas and Logo Design
 * Captainjamason - Programming
 ---
-### Come say Hi!
-* Discord: https://discord.gg/pTBhqGM 
-* IRC: #hurbOS on freenode
