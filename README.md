@@ -12,7 +12,7 @@ A Unix like OS with security and stability in mind.
 - [ ] ~~Bash?~~ zsh!
 - [ ] ZFS
 - [ ] Installer
-- [ ] Package Manager
+- [ ] Package Manager (LIGHT)
 
 ## Contributers
 * Thou - Ideas and Logo Design
