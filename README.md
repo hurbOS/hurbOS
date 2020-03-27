@@ -18,3 +18,5 @@ A Unix like OS with security and stability in mind.
 * Thou - Ideas and Logo Design
 * Captainjamason - Programming
 ---
+## Discord Server
+https://discord.gg/GKdZwRa
