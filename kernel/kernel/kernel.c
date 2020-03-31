@@ -3,7 +3,5 @@
 
 void kernel_main(void) {
 	terminal_initialize();
-	printf("Hello World!\n");
-	printf("This is a test!\n");
-	printf("Test pt2 electric boogaloo");
+	printf("Carraige \r return test \n with a new line");
 }
