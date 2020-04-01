@@ -3,5 +3,5 @@
 
 void kernel_main(void) {
 	terminal_initialize();
-	printf("Carraige \r return test \n with a new line");
+	printf("Welcome to hurbOS");
 }
