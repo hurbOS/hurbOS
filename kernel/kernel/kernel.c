@@ -3,5 +3,5 @@
 
 void kernel_main(void) {
 	terminal_initialize();
-	printf("Welcome to hurbOS");
+	printf("Welcome to hurbOS\n");
 }
