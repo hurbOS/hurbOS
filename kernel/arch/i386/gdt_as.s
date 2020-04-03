@@ -1,8 +1,8 @@
 .global gdt_flush
 
 gdt_flush:
-   mov (esp+4), %eax
-   lgdt (eax)
+   mov (%esp,4), %eax
+   lgdt (%eax)
 
    mov 0x10, %ax    
    mov %ax, %ds      
@@ -10,6 +10,6 @@ gdt_flush:
    mov %ax, %fs
    mov %ax, %gs
    mov %ax, %ss
-   jmp 0x08:_flush 
-.flush:
+   jmp $0x08,$flush 
+flush:
    ret
