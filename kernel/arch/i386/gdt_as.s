@@ -1,5 +1,8 @@
 .global gdt_flush
 
+gdtr DW 0
+     DD 0
+
 gdt_flush:
    mov 4(%esp), %eax
    lgdt (%eax)
@@ -10,6 +13,4 @@ gdt_flush:
    mov %ax, %fs
    mov %ax, %gs
    mov %ax, %ss
-   jmp $0x08,$flush
-flush:
    ret
