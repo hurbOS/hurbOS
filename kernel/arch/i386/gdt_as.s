@@ -1,16 +1,17 @@
-.global gdt_flush
-
-gdtr DW 0
-     DD 0
+.GLOBAL gdt_flush
+.intel_syntax noprefix
 
 gdt_flush:
-   mov 4(%esp), %eax
-   lgdt (%eax)
+   mov eax, [esp+4]
+   lgdt [eax]
 
-   mov 0x10, %ax    
-   mov %ax, %ds      
-   mov %ax, %es
-   mov %ax, %fs
-   mov %ax, %gs
-   mov %ax, %ss
-   ret
+   mov ax, 0x10    
+   mov ds, ax      
+   mov es, ax
+   mov fs, ax
+   mov gs, ax
+   mov ss, ax
+   jmp 0x08:.flush
+
+.flush:
+     ret
