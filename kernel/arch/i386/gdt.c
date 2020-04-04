@@ -1,7 +1,9 @@
 #include <stdint.h>
+#include <stdio.h>
 #include <kernel/gdt.h>
 
 extern void gdt_flush(uint32_t);
+extern void reload_segments();
 
 gdt_entry_t gdt_entries[5];
 gdt_ptr_t gdt_ptr;
@@ -14,6 +16,7 @@ static void gdt_set_gate(uint32_t num, uint32_t base, uint32_t limit, uint8_t ac
     gdt_entries[num].granularity = (limit >> 16) & 0x0F;
     gdt_entries[num].granularity |= gran & 0xF0;
     gdt_entries[num].access = access;
+    printf("Initialized GDT nums\n");
 }
 
 static void init_gdt() {
@@ -24,7 +27,11 @@ static void init_gdt() {
     gdt_set_gate(1, 0, 0xffffffff, 0x9A, 0xCF);
     gdt_set_gate(2, 0, 0xffffffff, 0x92, 0xCF);
     gdt_set_gate(3, 0, 0xffffffff, 0x89, 0xCF);
+    printf("Initialized GDT table\n");
     gdt_flush((uint32_t) & gdt_ptr);
+    printf("Flushed the GDT\n");
+    reload_segments();
+    printf("Reloaded segments\n");
 }
 
 void init_gdt_tables() {
