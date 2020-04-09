@@ -6,5 +6,4 @@
 void kernel_main(void) {
 	terminal_initialize();
 	printf("[O] Terminal Initialized\n");
-	init_gdt();
 }

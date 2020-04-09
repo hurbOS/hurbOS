@@ -16,24 +16,18 @@ static void gdt_set_gate(uint32_t num, uint32_t base, uint32_t limit, uint8_t ac
     gdt_entries[num].granularity = (limit >> 16) & 0x0F;
     gdt_entries[num].granularity |= gran & 0xF0;
     gdt_entries[num].access = access;
-    printf("Initialized GDT nums\n");
 }
 
-static void init_gdt() {
-    gdt_ptr.limit = (sizeof(gdt_entry_t) * 5) - 1;
-    gdt_ptr.base = (uint32_t)&gdt_entries;
+void init_gdt() {
+	printf("[] Initializing GDT Tables");
+    	gdt_ptr.limit = (sizeof(gdt_entry_t) * 5) - 1;
+    	gdt_ptr.base = (uint32_t)&gdt_entries;
 
-    gdt_set_gate(0, 0, 0, 0, 0);
-    gdt_set_gate(1, 0, 0xffffffff, 0x9A, 0xCF);
-    gdt_set_gate(2, 0, 0xffffffff, 0x92, 0xCF);
-    gdt_set_gate(3, 0, 0xffffffff, 0x89, 0xCF);
-    printf("Initialized GDT table\n");
-    gdt_flush((uint32_t) & gdt_ptr);
-    printf("Flushed the GDT\n");
-    reload_segments();
-    printf("Reloaded segments\n");
-}
-
-void init_gdt_tables() {
-    init_gdt();
+    	gdt_set_gate(0, 0, 0, 0, 0);
+    	gdt_set_gate(1, 0, 0xffffffff, 0x9A, 0xCF);
+    	gdt_set_gate(2, 0, 0xffffffff, 0x92, 0xCF);
+    	gdt_set_gate(3, 0, 0xffffffff, 0x89, 0xCF);
+    	gdt_flush((uint32_t) & gdt_ptr);
+    	//reload_segments();
+    	printf("\r[O] Initializing GDT Tables \n");
 }
