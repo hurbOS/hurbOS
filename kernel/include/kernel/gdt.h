@@ -3,22 +3,22 @@
 #include <stdint.h>
 
 struct gdt_entry {
-    uint16_t limit_low;
-    uint16_t base_low;
-    uint8_t base_middle;
-    uint8_t access;
-    uint8_t granularity;
-    uint8_t base_high;
-} __attribute__((packed));
-typedef struct gdt_entry gdt_entry_t;
+	unsigned short limit_low;
+	unsigned short base_low;
+	unsigned char base_middle;
+	unsigned char access;
+	unsigned char granularity;
+	unsigned char base_high;
+}__attribute__((packed));
 
-struct gdt_ptr
-{
-    uint16_t limit;
-    uint32_t base;
-} __attribute__((packed));
-typedef struct gdt_ptr gdt_ptr_t;
+struct gdt_ptr {
+	unsigned short limit;
+	unsigned int base;
+}__attribute__((packed));
 
-void init_gdt();
+struct gdt_entry gdt[3];
+struct gdt_ptr gdtptr;
+
+extern void gdt_flush();
 
 #endif

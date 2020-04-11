@@ -22,9 +22,9 @@ stack_top:
 _start:
 	movl $stack_top, %esp
 	call _init
+	cli
 	call kernel_main
 
-	cli
 1:	hlt
 	jmp 1b
 .size _start, . - _start
