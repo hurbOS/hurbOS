@@ -4,7 +4,8 @@
 #include <stdlib.h>
 
 void kernel_main(void) {
-	init_gdt();
 	terminal_initialize();
 	printf("[O] Terminal Initialized\n");
+	gdt_flush();
+	printf("[O] GDT Initialized\n");
 }
