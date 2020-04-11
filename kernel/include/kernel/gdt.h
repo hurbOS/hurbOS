@@ -3,6 +3,5 @@
 #include <stdint.h>
 
 extern void gdt_flush();
-extern void gdt_init();
 
 #endif

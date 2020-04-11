@@ -1,5 +1,4 @@
 .global gdt_flush
-.global gdt_init
 
 .section .data
 gdt_start:
