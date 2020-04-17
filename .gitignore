@@ -2,3 +2,4 @@ iso/*
 *.o
 *.bin
 kernel.elf
+src/kernel.elf
