@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include<bootscreen.h>
+#include<splash.h>
 
 void kmain(void) {
-    call bootscreen.h
+    bootSplash();
 }
