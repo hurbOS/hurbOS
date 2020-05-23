@@ -17,19 +17,34 @@ SECTIONS
 
    .text ALIGN(4K): AT(ADDR(.text) - KNL_HIGH_VMA)
    {
+<<<<<<< HEAD
       *(.text)
+=======
+        *(.text)
+>>>>>>> 5ec5da79c5b66690213e739ccb78661b8d2544f4
    }
 
    .data ALIGN(4K): AT(ADDR(.data) - KNL_HIGH_VMA)
    {
+<<<<<<< HEAD
 	   *(.data)
       *(.rodata)
+=======
+	*(.data)
+        *(.rodata)
+>>>>>>> 5ec5da79c5b66690213e739ccb78661b8d2544f4
    }
 
    .bss ALIGN(4K): AT(ADDR(.bss) - KNL_HIGH_VMA)
    {
+<<<<<<< HEAD
       *(COMMON)
 	   *(.bss)
    }
    KNL_CORE_END = ALIGN(4K);
+=======
+        *(COMMON)
+	*(.bss)
+   }
+>>>>>>> 5ec5da79c5b66690213e739ccb78661b8d2544f4
 }
