@@ -1,3 +1,5 @@
-*.iso
-isodir
-sysroot
+iso/*
+*.o
+*.bin
+kernel.elf
+src/kernel.elf
