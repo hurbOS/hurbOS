@@ -2,11 +2,7 @@ SOURCEDIR=src
 
 SRC=$(shell find $(SOURCEDIR) -name "*.c" -o -name "*.asm")
 REAL=$(shell find $(SOURCEDIR) -name "*.real")
-<<<<<<< HEAD
 INCLUDE:=src/include
-=======
-INCLUDE:=include
->>>>>>> 5ec5da79c5b66690213e739ccb78661b8d2544f4
 
 CC=x86_64-elf-gcc
 CFLAGS= -O2                        \
