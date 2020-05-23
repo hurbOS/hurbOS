@@ -7,7 +7,3 @@ section .text
 
         xor rbp, rbp
         call kmain
-
-        hlt
-
-        jmp $

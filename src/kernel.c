@@ -1,8 +1,10 @@
-// kernel.c
-// Aurelian, MaxiMal_98
+#include <system.h>
 
-//#include <stdio.h>
-//#include <splash.h>
-
-void kmain(void) {
+void kmain(uint64_t magic, multiboot_info_t* info) {
+    pmm_init(info);
+    vmm_init();
+    while (1) {
+        asm volatile("hlt");
+    }
 }
+

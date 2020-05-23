@@ -17,18 +17,19 @@ SECTIONS
 
    .text ALIGN(4K): AT(ADDR(.text) - KNL_HIGH_VMA)
    {
-        *(.text)
+      *(.text)
    }
 
    .data ALIGN(4K): AT(ADDR(.data) - KNL_HIGH_VMA)
    {
-	*(.data)
-        *(.rodata)
+	   *(.data)
+      *(.rodata)
    }
 
    .bss ALIGN(4K): AT(ADDR(.bss) - KNL_HIGH_VMA)
    {
-        *(COMMON)
-	*(.bss)
+      *(COMMON)
+	   *(.bss)
    }
+   KNL_CORE_END = ALIGN(4K);
 }
